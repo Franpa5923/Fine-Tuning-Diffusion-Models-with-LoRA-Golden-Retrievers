@@ -1,0 +1,1589 @@
+{
+  "dataset_name": "golden_retrievers",
+  "total_images": 113,
+  "resolution": "512x512",
+  "images": [
+    {
+      "id": "golden_0001",
+      "filename": "golden_0001.jpg",
+      "original_name": "n155770.jpg",
+      "original_size": [
+        750,
+        562
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0002",
+      "filename": "golden_0002.jpg",
+      "original_name": "n156194.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0003",
+      "filename": "golden_0003.jpg",
+      "original_name": "n156195.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0004",
+      "filename": "golden_0004.jpg",
+      "original_name": "n156196.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0005",
+      "filename": "golden_0005.jpg",
+      "original_name": "n156229.jpeg",
+      "original_size": [
+        750,
+        750
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0006",
+      "filename": "golden_0006.jpg",
+      "original_name": "n156433.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0007",
+      "filename": "golden_0007.jpg",
+      "original_name": "n157489.jpeg",
+      "original_size": [
+        540,
+        540
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0008",
+      "filename": "golden_0008.jpg",
+      "original_name": "n157501.jpeg",
+      "original_size": [
+        750,
+        750
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0009",
+      "filename": "golden_0009.jpg",
+      "original_name": "n157502.jpeg",
+      "original_size": [
+        750,
+        750
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0010",
+      "filename": "golden_0010.jpg",
+      "original_name": "n157609.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0011",
+      "filename": "golden_0011.jpg",
+      "original_name": "n157610.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0012",
+      "filename": "golden_0012.jpg",
+      "original_name": "n157611.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0013",
+      "filename": "golden_0013.jpg",
+      "original_name": "n157629.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0014",
+      "filename": "golden_0014.jpg",
+      "original_name": "n157699.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0015",
+      "filename": "golden_0015.jpg",
+      "original_name": "n157701.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0016",
+      "filename": "golden_0016.jpg",
+      "original_name": "n157702.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0017",
+      "filename": "golden_0017.jpg",
+      "original_name": "n157728.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0018",
+      "filename": "golden_0018.jpg",
+      "original_name": "n157736.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0019",
+      "filename": "golden_0019.jpg",
+      "original_name": "n157737.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0020",
+      "filename": "golden_0020.jpg",
+      "original_name": "n157742.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0021",
+      "filename": "golden_0021.jpg",
+      "original_name": "n157743.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0022",
+      "filename": "golden_0022.jpg",
+      "original_name": "n157744.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0023",
+      "filename": "golden_0023.jpg",
+      "original_name": "n157788.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0024",
+      "filename": "golden_0024.jpg",
+      "original_name": "n157793.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0025",
+      "filename": "golden_0025.jpg",
+      "original_name": "n157816.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0026",
+      "filename": "golden_0026.jpg",
+      "original_name": "n157818.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0027",
+      "filename": "golden_0027.jpg",
+      "original_name": "n157850.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0028",
+      "filename": "golden_0028.jpg",
+      "original_name": "n157879.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0029",
+      "filename": "golden_0029.jpg",
+      "original_name": "n157880.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0030",
+      "filename": "golden_0030.jpg",
+      "original_name": "n157900.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0031",
+      "filename": "golden_0031.jpg",
+      "original_name": "n157901.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0032",
+      "filename": "golden_0032.jpg",
+      "original_name": "n157925.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0033",
+      "filename": "golden_0033.jpg",
+      "original_name": "n157928.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0034",
+      "filename": "golden_0034.jpg",
+      "original_name": "n157938.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0035",
+      "filename": "golden_0035.jpg",
+      "original_name": "n157963.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0036",
+      "filename": "golden_0036.jpg",
+      "original_name": "n157967.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0037",
+      "filename": "golden_0037.jpg",
+      "original_name": "n157968.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0038",
+      "filename": "golden_0038.jpg",
+      "original_name": "n157971.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0039",
+      "filename": "golden_0039.jpg",
+      "original_name": "n157983.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0040",
+      "filename": "golden_0040.jpg",
+      "original_name": "n157988.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0041",
+      "filename": "golden_0041.jpg",
+      "original_name": "n157989.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0042",
+      "filename": "golden_0042.jpg",
+      "original_name": "n157990.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0043",
+      "filename": "golden_0043.jpg",
+      "original_name": "n157991.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0044",
+      "filename": "golden_0044.jpg",
+      "original_name": "n157992.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0045",
+      "filename": "golden_0045.jpg",
+      "original_name": "n157993.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0046",
+      "filename": "golden_0046.jpg",
+      "original_name": "n157994.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0047",
+      "filename": "golden_0047.jpg",
+      "original_name": "n157997.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0048",
+      "filename": "golden_0048.jpg",
+      "original_name": "n158007.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0049",
+      "filename": "golden_0049.jpg",
+      "original_name": "n158008.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0050",
+      "filename": "golden_0050.jpg",
+      "original_name": "n158037.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0051",
+      "filename": "golden_0051.jpg",
+      "original_name": "n158053.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0052",
+      "filename": "golden_0052.jpg",
+      "original_name": "n158056.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0053",
+      "filename": "golden_0053.jpg",
+      "original_name": "n158058.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0054",
+      "filename": "golden_0054.jpg",
+      "original_name": "n158059.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0055",
+      "filename": "golden_0055.jpg",
+      "original_name": "n158071.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0056",
+      "filename": "golden_0056.jpg",
+      "original_name": "n158100.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0057",
+      "filename": "golden_0057.jpg",
+      "original_name": "n158101.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0058",
+      "filename": "golden_0058.jpg",
+      "original_name": "n158102.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0059",
+      "filename": "golden_0059.jpg",
+      "original_name": "n158103.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0060",
+      "filename": "golden_0060.jpg",
+      "original_name": "n158104.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0061",
+      "filename": "golden_0061.jpg",
+      "original_name": "n158106.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0062",
+      "filename": "golden_0062.jpg",
+      "original_name": "n158113.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0063",
+      "filename": "golden_0063.jpg",
+      "original_name": "n158114.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0064",
+      "filename": "golden_0064.jpg",
+      "original_name": "n158115.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0065",
+      "filename": "golden_0065.jpg",
+      "original_name": "n158121.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0066",
+      "filename": "golden_0066.jpg",
+      "original_name": "n158136.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0067",
+      "filename": "golden_0067.jpg",
+      "original_name": "n158137.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0068",
+      "filename": "golden_0068.jpg",
+      "original_name": "n158138.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0069",
+      "filename": "golden_0069.jpg",
+      "original_name": "n158143.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0070",
+      "filename": "golden_0070.jpg",
+      "original_name": "n158144.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0071",
+      "filename": "golden_0071.jpg",
+      "original_name": "n158159.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0072",
+      "filename": "golden_0072.jpg",
+      "original_name": "n158160.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0073",
+      "filename": "golden_0073.jpg",
+      "original_name": "n158171.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0074",
+      "filename": "golden_0074.jpg",
+      "original_name": "n158172.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0075",
+      "filename": "golden_0075.jpg",
+      "original_name": "n158216.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0076",
+      "filename": "golden_0076.jpg",
+      "original_name": "n158217.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0077",
+      "filename": "golden_0077.jpg",
+      "original_name": "n158226.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0078",
+      "filename": "golden_0078.jpg",
+      "original_name": "n158241.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0079",
+      "filename": "golden_0079.jpg",
+      "original_name": "n158244.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0080",
+      "filename": "golden_0080.jpg",
+      "original_name": "n158294.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0081",
+      "filename": "golden_0081.jpg",
+      "original_name": "n158295.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0082",
+      "filename": "golden_0082.jpg",
+      "original_name": "n158325.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0083",
+      "filename": "golden_0083.jpg",
+      "original_name": "n158328.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0084",
+      "filename": "golden_0084.jpg",
+      "original_name": "n158334.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0085",
+      "filename": "golden_0085.jpg",
+      "original_name": "n158350.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0086",
+      "filename": "golden_0086.jpg",
+      "original_name": "n158356.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0087",
+      "filename": "golden_0087.jpg",
+      "original_name": "n158361.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0088",
+      "filename": "golden_0088.jpg",
+      "original_name": "n158365.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0089",
+      "filename": "golden_0089.jpg",
+      "original_name": "n158366.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0090",
+      "filename": "golden_0090.jpg",
+      "original_name": "n158374.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0091",
+      "filename": "golden_0091.jpg",
+      "original_name": "n158378.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0092",
+      "filename": "golden_0092.jpg",
+      "original_name": "n158380.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0093",
+      "filename": "golden_0093.jpg",
+      "original_name": "n158381.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0094",
+      "filename": "golden_0094.jpg",
+      "original_name": "n158382.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0095",
+      "filename": "golden_0095.jpg",
+      "original_name": "n158420.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0096",
+      "filename": "golden_0096.jpg",
+      "original_name": "n158439.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0097",
+      "filename": "golden_0097.jpg",
+      "original_name": "n158440.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0098",
+      "filename": "golden_0098.jpg",
+      "original_name": "n158441.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0099",
+      "filename": "golden_0099.jpg",
+      "original_name": "n158477.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0100",
+      "filename": "golden_0100.jpg",
+      "original_name": "n158478.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0101",
+      "filename": "golden_0101.jpg",
+      "original_name": "n158512.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0102",
+      "filename": "golden_0102.jpg",
+      "original_name": "n158513.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0103",
+      "filename": "golden_0103.jpg",
+      "original_name": "n158514.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0104",
+      "filename": "golden_0104.jpg",
+      "original_name": "n158527.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0105",
+      "filename": "golden_0105.jpg",
+      "original_name": "n158528.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0106",
+      "filename": "golden_0106.jpg",
+      "original_name": "n158546.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0107",
+      "filename": "golden_0107.jpg",
+      "original_name": "n158587.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0108",
+      "filename": "golden_0108.jpg",
+      "original_name": "n158588.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0109",
+      "filename": "golden_0109.jpg",
+      "original_name": "n158589.jpeg",
+      "original_size": [
+        720,
+        720
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0110",
+      "filename": "golden_0110.jpg",
+      "original_name": "n159462.jpeg",
+      "original_size": [
+        750,
+        750
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0111",
+      "filename": "golden_0111.jpg",
+      "original_name": "n159463.jpeg",
+      "original_size": [
+        750,
+        750
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0112",
+      "filename": "golden_0112.jpg",
+      "original_name": "n159464.jpeg",
+      "original_size": [
+        750,
+        750
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    },
+    {
+      "id": "golden_0113",
+      "filename": "golden_0113.jpg",
+      "original_name": "n160160.jpeg",
+      "original_size": [
+        750,
+        750
+      ],
+      "final_size": [
+        512,
+        512
+      ],
+      "caption": "a photo of a <sksdog> dog"
+    }
+  ]
+}
