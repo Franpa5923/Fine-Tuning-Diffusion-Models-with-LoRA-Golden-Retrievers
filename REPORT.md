@@ -194,9 +194,9 @@ When applied to all attention layers (4 projections × ~80 layers):
 
 | Property | Value |
 |----------|-------|
-| Total images | 100+ high-quality samples |
+| Total images | 113 high-quality samples |
 | Image format | JPG, PNG |
-| Original resolution | Variable (800×600 to 2400×1600) |
+| Original resolution | Variable (800×600 to 520*520) |
 | Processing | Resize to 512×512, convert to RGB |
 | Output resolution | 512×512 pixels |
 | Storage | ~2GB total |
@@ -250,7 +250,7 @@ Environment:
 
 **Justification of Key Choices**:
 
-1. **Learning Rate (1e-4)**: Standard for LoRA; smaller than full fine-tuning (5e-5) due to higher variance in low-rank updates
+1. **Learning Rate (1e-4)**: Standard for LoRA; smaller than full fine-tuning (5e-5) due to higher variance in low-rank updates. It still took 8 hours to train the whole model.
 2. **Gradient Accumulation**: Simulates larger batches without requiring more memory
 3. **Target Modules**: Attention projections are typically most sensitive to distribution shift
 4. **Special Tokens**: Enables one-shot binding of concept to visual patterns
@@ -285,33 +285,7 @@ Environment:
    - Reduces memory quadratically: $(512/384)^2 \approx 1.78x$
    - Minimal quality loss for fine-tuning
    - Memory equation: $\text{Mem} \propto \text{Batch} \times \text{Resolution}^2$
-
-### 3.5 Evaluation Metrics
-
-**Quantitative Metrics**:
-
-1. **Parameter Efficiency**
-   - Trainable parameter count
-   - % of total model parameters
-   - Storage overhead (MB)
-
-2. **Training Efficiency**
-   - Training time (minutes)
-   - Convergence rate (loss decay)
-   - Memory consumption (peak VRAM in GB)
-
-3. **Inference Performance**
-   - Latency per image (seconds)
-   - Throughput (images per minute)
-   - Peak inference VRAM
-
-**Qualitative Metrics**:
-
-1. **Breed Recognition**: Does the model correctly identify Golden Retrievers?
-2. **Visual Fidelity**: Accuracy of color, texture, and facial features
-3. **Prompt Adherence**: Does the model respect text conditioning?
-4. **Consistency**: Reproducibility across multiple generations
-5. **Generalization**: Performance on unseen prompt variations
+   - Done mainly because of memory constraints. My computer can't handle 512x512 even with all optimizations.
 
 ---
 
@@ -488,13 +462,6 @@ def train_lora(images_dir, output_dir, rank=8,
                 optimizer.zero_grad()
 ```
 
-**Key Training Insights**:
-
-1. **Latent Scaling (0.18215)**: Empirically determined scaling to normalize latent variance
-2. **Frozen Encoders**: Reduces gradient computation by ~95%
-3. **Noise Prediction Objective**: More stable than direct denoising
-4. **Timestep Sampling**: Uniform from [0, T]; enables all noise levels
-
 ### 4.5 Inference Pipeline
 
 ```python
@@ -560,6 +527,7 @@ pipe.unload_lora_weights()
 1. Training time nearly identical despite different ranks (dominated by encoder inference, not LoRA computation)
 2. Peak memory consistent (~4.1-4.2 GB), confirming memory-efficient design
 3. Both ranks converge to similar loss values (marginal improvement for r=16)
+4. We will talk about this later on, but results are way better with rank 16.
 
 #### 5.1.3 Inference Performance
 
@@ -575,94 +543,105 @@ pipe.unload_lora_weights()
 - VRAM increase of 200MB due to adapter weights in memory
 - Throughput decrease <2%, acceptable trade-off for task-specific quality
 
-#### 5.1.4 Device Compatibility
 
-Successfully trained and inferred on:
-- ✅ RTX 3060 (12GB) - comfortable margin
-- ✅ RTX 3050 (8GB) - with optimizations
-- ✅ RTX 4050 (6GB) - working
-- ✅ M1/M2 Pro (16GB unified) - slower but stable
 
-### 5.2 Qualitative Results
+## 5.2 Quality Assessment
 
-#### 5.2.1 Generated Images
-
-**Test Prompts**:
-
-1. "a photo of a `<sksdog>` dog in a park"
-2. "a `<sksdog>` dog sitting"
-3. "a `<sksdog>` dog playing in grass"
-
-**Quality Assessment**:
+### 5.2.1 Quantitative and Qualitative Comparison
 
 | Aspect | Base Model | LoRA r=8 | LoRA r=16 |
 |--------|-----------|----------|-----------|
-| **Breed Recognition** | Generic dog | Golden Retriever | Golden Retriever |
-| **Coat Color** | Brown/white | Golden/cream | Golden/cream |
-| **Texture Quality** | Standard | Detailed fur | Fine detail |
-| **Facial Features** | Generic | Breed-specific | Breed-specific |
-| **Consistency** | Low | High (0.85+) | Very High (0.92+) |
+| **Breed Recognition** | Generic dog | Mostly generic / mixed breeds | Golden Retriever |
+| **Coat Color** | Brown/white or random | Black, brown, mixed | Golden / cream |
+| **Texture Quality** | Standard | Standard | Slightly improved |
+| **Facial Features** | Generic | Generic or mixed | Breed-specific |
+| **Consistency** | Low | Low–Medium | High (≈0.9+) |
 
-#### 5.2.2 Key Observations
+---
 
-**Successful Aspects**:
+### 5.2.2 Key Observations
 
-1. **Breed-Specific Learning**: Both LoRA models successfully learned Golden Retriever characteristics
-   - Accurate coat color (golden/cream)
-   - Correct body proportions
-   - Characteristic facial features (droopy ears, gentle expression)
+#### Successful Aspects
 
-2. **Prompt Adherence**: Models respect conditioning text
-   - "in a park" → appropriate backgrounds
-   - "sitting" → correct poses
-   - "playing" → dynamic compositions
+1. **Breed-Specific Learning**
+   - The **r = 16** LoRA clearly learned Golden Retriever characteristics:
+     - Typical golden/cream coat color  
+     - Correct body proportions  
+     - Characteristic facial traits (droopy ears, gentle expression)
+   - The **r = 8** LoRA showed *partial* to none learning but often reverted to generic or other dog breeds.
 
-3. **Generalization**: Performs well on unseen prompt variations
-   - Color variations (lighter/darker)
-   - Environmental changes
-   - Pose variations
+2. **Prompt Adherence**
+   - Both LoRA models follow textual conditioning correctly:
+     - "in a park" → outdoor environments  
+     - "sitting" → correct poses  
+     - "playing" → dynamic compositions  
 
-**Comparative Analysis (r=8 vs r=16)**:
+3. **Generalization**
+   - The r = 16 model generalizes well to unseen prompt variations:
+     - Lighting and color variations  
+     - Different environments  
+     - Multiple poses  
 
-- **r=8**: Strong breed recognition, minor texture details sometimes glossed
-- **r=16**: Marginally sharper textures, more consistent fine details
-- **Trade-off**: r=16 offers ~3-5% quality improvement with 100% more parameters and storage
+---
 
-#### 5.2.3 Failure Cases
+### 5.2.3 Comparative Analysis (r = 8 vs r = 16)
 
-**Limitations Observed**:
+- **r = 8**
+  - Often fails to enforce Golden Retriever identity.
+  - Frequently generates black, brown, or mixed-breed dogs.
+  - Indicates insufficient representational capacity for strong concept binding.
 
-1. **Complex Scenes**: Still struggles with complex multi-object scenes
-   - Inherent to base model, not LoRA limitation
+- **r = 16**
+  - Consistently produces Golden Retrievers.
+  - Slightly sharper texture and more stable facial features.
+  - More robust against prompt variation.
 
-2. **Extreme Poses**: Unusual poses sometimes distort anatomy
-   - Inherited from training data
+**Trade-off:**  
+r = 16 yields a significant qualitative improvement in breed fidelity and consistency at the cost of doubling LoRA parameters and storage, which is still negligible compared to full fine-tuning.
 
-3. **Text Overloading**: Very long or detailed prompts may confuse the model
-   - CLIP tokenizer limitation
+---
 
-### 5.3 Comparative Analysis
+### 5.2.4 Failure Cases
 
-#### 5.3.1 vs. Full Fine-Tuning
+#### Observed Limitations
 
-| Aspect | Full Fine-Tuning | LoRA r=8 |
-|--------|------------------|----------|
-| **Trainable Params** | 860M | 3.5M |
+1. **Complex Scenes**
+   - Both models struggle with complex multi-object scenes.
+   - I still love the golden retriever girafe.
+   - Limitation inherited from the base diffusion model.
+
+2. **Extreme Poses**
+   - Unusual or rare poses sometimes produce anatomical distortions.
+   - Likely due to limited pose diversity in the training data.
+
+---
+
+## 5.3 Comparative Analysis
+
+### 5.3.1 vs Full Fine-Tuning
+
+| Aspect | Full Fine-Tuning | LoRA r=16 |
+|--------|------------------|-----------|
+| **Trainable Params** | 860M | ~7M |
 | **GPU Memory (4GB)** | ❌ Infeasible | ✅ Works |
-| **Training Speed** | Slower | ~2x faster |
-| **Storage per Task** | 4GB | 3MB |
-| **Quality** | Marginal improvement | Comparable |
+| **Training Speed** | Slow | ~2× faster |
+| **Storage per Task** | ~4GB | ~6MB |
+| **Quality** | Slightly higher | Very close |
 
-#### 5.3.2 vs. Other Efficient Methods
+---
 
-| Method | LoRA r=8 | QLoRA | Adapter |
+### 5.3.2 vs Other Efficient Methods
+
+| Method | LoRA r=16 | QLoRA | Adapter |
 |--------|----------|-------|---------|
-| **Parameters** | 0.41% | 0.1% | 0.8% |
+| **Parameters** | 0.8% | 0.1% | 0.8% |
 | **Memory** | Low | Very Low | Medium |
 | **Quality** | High | Similar | Similar |
 | **Implementation** | Simple | Complex | Medium |
 
-**Verdict**: LoRA provides best balance of simplicity, memory efficiency, and quality.
+**Verdict:**  
+LoRA with sufficient rank (r ≥ 16) provides the best balance between simplicity, memory efficiency, and task-specific performance for fine-tuning diffusion models under constrained hardware.
+
 
 ---
 
@@ -696,21 +675,20 @@ $$\text{rank}(\Delta W) \ll \min(\text{shape}(W))$$
 ```
 Advantages:
   ✓ 50% parameter savings vs. r=16
-  ✓ Faster inference (marginally)
+  ✓ Slightly Faster inference (marginally)
   ✓ Lower storage overhead
-  ✓ Still high-quality outputs
+  ✓ Still high-quality dog outputs
 
 Disadvantages:
-  ✗ Slightly less detail in fine textures
-  ✗ May struggle with complex prompts
+  ✗ Less detail and worse results in general when talking about breed fidelity
 ```
 
-**Rank 16 Analysis**:
+**Rank 16 Analysis, the clear winner**:
 ```
 Advantages:
   ✓ 5-10% better visual fidelity
   ✓ More consistent fine details
-  ✓ Better generalization to unseen prompts
+  ✓ Better generalization to unseen prompts and breed fidelity 
 
 Disadvantages:
   ✗ 2x storage overhead
@@ -718,8 +696,6 @@ Disadvantages:
   ✗ Marginal quality improvement
 ```
 
-**Recommendation**: 
-For most applications, **r=8 is optimal**, providing 99.59% of quality with 50% fewer parameters. Use r=16 only when maximum fidelity is required.
 
 ### 6.3 Memory Efficiency Analysis
 
@@ -786,56 +762,6 @@ Step    | LoRA r=8 | LoRA r=16
    - r=16 gains ~5% improvement over r=8
    - Suggests saturation of benefit
 
-### 6.5 Generalization Performance
-
-**Tested on Out-of-Distribution Prompts**:
-
-```python
-prompts_test = [
-    "a <sksdog> dog on a beach",          # Novel environment
-    "a <sksdog> dog wearing sunglasses",  # Unusual objects
-    "a <sksdog> dog in snow",             # Novel setting
-    "a <sksdog> dog portrait",            # Different framing
-    "two <sksdog> dogs playing"           # Multiple subjects
-]
-```
-
-**Results**:
-
-- **Environment Transfer**: ✅ Excellent (80+% consistency)
-- **Object Insertion**: ⚠️ Moderate (sometimes distorts)
-- **Count Generalization**: ❌ Weak (struggles with multiple subjects)
-
-**Analysis**: LoRA successfully transfers learned breed characteristics but inherits base model limitations for complex scenarios.
-
-### 6.6 Practical Implications
-
-#### 6.6.1 For Practitioners
-
-1. **Model Adaptation**: LoRA enables fine-tuning on consumer GPUs
-   - Opens up personalization for individuals
-   - Reduces reliance on enterprise infrastructure
-
-2. **Deployment**: Minimal overhead for deployment
-   - 3MB LoRA weights vs. 4GB base model
-   - Can load/unload quickly
-
-3. **Multi-Task Scenarios**: Multiple LoRA adapters for different subjects
-   - Customize for specific users, styles, or domains
-   - Each adapter is lightweight
-
-#### 6.6.2 For Research
-
-1. **Parameter-Efficient Adaptation**: LoRA is now standard for fine-tuning
-   - Enables research on resource-constrained systems
-   - Focuses effort on algorithm over infrastructure
-
-2. **Emergent Abilities**: Potential to add specialized skills without forgetting
-   - Few-shot learning with LoRA
-   - Concept composition via adapter merging
-
-3. **Interpretability**: Low-rank matrices potentially more interpretable
-   - Future work: analyze LoRA weight patterns
 
 ---
 
@@ -847,71 +773,11 @@ prompts_test = [
    
 2. **Practical Feasibility**: Achieved full fine-tuning on 4GB GPU (RTX 3060), previously infeasible for this model
 
-3. **Rank Optimization**: Rank-8 provides excellent quality-efficiency trade-off; rank-16 offers marginal 5% improvement at 2x cost
+3. **Rank Optimization**: Rank-16 provides excellent quality-efficiency trade-off.
 
 4. **Training Stability**: LoRA training is stable and convergent; no special tricks required
 
 5. **Inference Efficiency**: <3% latency overhead; minimal impact on deployment
-
-### 7.2 Validation of Hypothesis
-
-**Hypothesis**: "LoRA with appropriate rank configurations can achieve effective fine-tuning while maintaining computational efficiency."
-
-**Status**: ✅ **CONFIRMED**
-
-- Effective fine-tuning: ✅ Golden Retriever characteristics learned successfully
-- Computational efficiency: ✅ 4GB GPU feasible, 0.41% trainable parameters
-- Appropriate ranks identified: ✅ r=8 optimal, r=16 marginal benefit
-
-### 7.3 Comparative Assessment
-
-| Criterion | Evaluation |
-|-----------|-----------|
-| **Ease of Implementation** | ⭐⭐⭐⭐⭐ |
-| **Memory Efficiency** | ⭐⭐⭐⭐⭐ |
-| **Training Speed** | ⭐⭐⭐⭐ |
-| **Output Quality** | ⭐⭐⭐⭐⭐ |
-| **Generalization** | ⭐⭐⭐⭐ |
-| **Deployment Convenience** | ⭐⭐⭐⭐⭐ |
-
-### 7.4 Limitations and Future Work
-
-**Current Limitations**:
-
-1. **Complex Scene Understanding**: Inherited from base model
-2. **Multiple Subject Handling**: Tokenizer and attention limitations
-3. **Fine-Grained Control**: Limited to text prompts; no image-based conditioning
-
-**Future Directions**:
-
-1. **Extended Experiments**:
-   - Rank sweep (r=4, 8, 16, 32) to identify saturation point
-   - Training duration study (500 vs. 2000 vs. 5000 steps)
-   - Multi-dataset evaluation (other dog breeds, cats, objects)
-
-2. **Technical Improvements**:
-   - LoRA weight merging for standalone checkpoints
-   - Combination with other methods (QLoRA, prefix tuning)
-   - Adapter arithmetic (compose multiple concepts)
-
-3. **Applications**:
-   - User-specific image generation pipelines
-   - Real-time personalization systems
-   - Mobile deployment via quantized LoRA
-
-### 7.5 Significance and Impact
-
-**Immediate Impact**:
-- Democratizes personalized image generation
-- Enables fine-tuning on consumer hardware
-- Reduces barrier to entry for model customization
-
-**Broader Implications**:
-- LoRA becoming standard in foundation model adaptation
-- Enablement of long-tail applications (niche domains)
-- Shift toward edge-deployable, personalized AI
-
-**Reproducibility**: All code, models, and hyperparameters documented for full reproducibility.
 
 ---
 
@@ -927,11 +793,8 @@ prompts_test = [
    - https://arxiv.org/abs/2112.10752
    - Stable Diffusion architecture and training methodology
 
-3. **Ho et al. (2020)**. Denoising Diffusion Probabilistic Models.
-   - https://arxiv.org/abs/2006.11239
-   - Foundational diffusion model theory
 
-4. **Nichol et al. (2021)**. GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models.
+3. **Nichol et al. (2021)**. GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models.
    - https://arxiv.org/abs/2112.10741
    - Text-conditioned diffusion models
 
@@ -1029,7 +892,3 @@ TRAINING_CONFIG = {
 ```
 
 ---
-
-**Report Generated**: January 2026  
-**Project Status**: ✅ Complete  
-**Reproducibility**: ✅ Fully Documented
